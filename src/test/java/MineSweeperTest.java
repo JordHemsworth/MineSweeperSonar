@@ -12,7 +12,19 @@ public class MineSweeperTest {
         assertEquals(true, testBomb.getBomb(), "The bomb returned false");
     }
 
+    @Test
+    public void test_getNeighbours(){
+        Tile testNeighbours = new Tile();
+        testNeighbours.setNeighbours();
+        assertEquals(1, testNeighbours.getNeighbours(), "You don't live next to anyone");
+    }
 
+    @Test
+    public void test_getFlagged(){
+        Tile testFlag = new Tile();
+        testFlag.toggleIsFlagged();
+        assertEquals(true, testFlag.getIsFlagged(), "The tile isn't flagged");
+    }
 
 
 }
